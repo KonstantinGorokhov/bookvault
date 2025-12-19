@@ -5,7 +5,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PySide6](https://img.shields.io/badge/PySide6-Qt6-green.svg)
 ![SQLite](https://img.shields.io/badge/SQLite-3-lightgrey.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![GitHub](https://img.shields.io/github/stars/KonstantinGorokhov/bookvault?style=social)
 ![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey.svg)
 
@@ -331,34 +330,6 @@ CREATE TABLE settings (
 - [ ] Синхронизация с облачными хранилищами
 - [ ] Экспорт заметок в Markdown
 - [ ] Индексирование текста книг для быстрого поиска
-
-## 📄 Лицензия
-
-Проект распространяется под лицензией [MIT License](LICENSE).
-
-Вы можете свободно использовать, изменять и распространять этот код.
-
-## 🤝 Вклад в проект
-
-Мы приветствуем любой вклад в развитие проекта!
-
-### Как внести вклад
-
-1. Форкните репозиторий
-2. Создайте ветку для вашей фичи (`git checkout -b feature/AmazingFeature`)
-3. Закоммитьте изменения (`git commit -m 'Add some AmazingFeature'`)
-4. Запушьте ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
-Подробное руководство смотрите в [CONTRIBUTING.md](CONTRIBUTING.md)
-
-### Сообщить об ошибке
-
-Нашли баг? [Создайте Issue](https://github.com/KonstantinGorokhov/bookvault/issues)
-
-### Идеи и предложения
-
-Есть идеи по улучшению? Откройте [Discussion](https://github.com/KonstantinGorokhov/bookvault/discussions)
 
 ---
 
