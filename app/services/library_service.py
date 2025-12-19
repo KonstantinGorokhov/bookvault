@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import os
 from datetime import datetime
-from typing import Literal, Optional
+from typing import Literal, Optional, cast
 
 from app.db import Database
 from app.models import Book
@@ -151,7 +151,8 @@ class LibraryService:
                 """,
                 (title, author, sf.path, sf.size_bytes, sf.format, self._db.now_iso()),
             )
-            return int(cur.lastrowid) if cur.lastrowid else None
+            # Возвращаем lastrowid напрямую (может быть int или None)
+            return cur.lastrowid  # type: ignore[return-value]
         except Exception:
             return None
 

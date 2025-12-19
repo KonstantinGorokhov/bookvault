@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from PySide6.QtCore import QAbstractListModel, QModelIndex, Qt
+from PySide6.QtCore import QAbstractListModel, QModelIndex, QPersistentModelIndex, Qt
 
 from app.models import Book
 
@@ -19,7 +19,9 @@ class BookListModel(QAbstractListModel):
         super().__init__()
         self._books: list[Book] = books or []
 
-    def rowCount(self, parent: QModelIndex | None = None) -> int:
+    def rowCount(
+        self, parent: QModelIndex | QPersistentModelIndex = QModelIndex()
+    ) -> int:
         """Возвращает количество строк.
 
         Returns:
@@ -27,7 +29,11 @@ class BookListModel(QAbstractListModel):
         """
         return len(self._books)
 
-    def data(self, index: QModelIndex, role: int = Qt.ItemDataRole.DisplayRole) -> Any:
+    def data(
+        self,
+        index: QModelIndex | QPersistentModelIndex,
+        role: int = Qt.ItemDataRole.DisplayRole,
+    ) -> Any:
         """Возвращает данные для отображения/использования.
 
         Args:

@@ -48,7 +48,11 @@ class BookEditDialog(QDialog):
         layout.addRow("Путь:", self.path_edit)
         layout.addRow("Заметка:", self.note_edit)
 
-        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel)
+        # Создаём кнопки диалога
+        buttons = QDialogButtonBox()
+        buttons.setStandardButtons(
+            QDialogButtonBox.StandardButton(0x00000400 | 0x00400000)
+        )
         buttons.accepted.connect(self.accept)
         buttons.rejected.connect(self.reject)
 
